@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
 
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { FiSettings } from "react-icons/fi";
+
+import "./App.css";
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <div className='fex relative dark:bg-main-dark-bg'>
+          <div className='fixed right-4 bottom-4' style={{ zIndex: "1000" }}>
+            <TooltipComponent content='Settings' position='Top'>
+              <button type='button' className='text-3xl'>
+                <FiSettings />
+              </button>
+            </TooltipComponent>
+          </div>
+        </div>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
