@@ -44,7 +44,7 @@ const Ecommerce = () => {
                 {item.icon}
               </button>
               <p className='mt-3'>
-                <span className='text-lg font-semibold '>{item.amount}</span>
+                <span className='text-lg font-semibold'>{item.amount}</span>
                 <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
                 </span>
@@ -55,7 +55,7 @@ const Ecommerce = () => {
         </div>
       </div>
       <div className='flex gap-10 flex-wrap justify-center'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 roundede-2xl md:w-780'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
             <div className='flex gap-4 items-center'>
@@ -101,6 +101,17 @@ const Ecommerce = () => {
                   color='blue'
                 />
               </div>
+              <div className='mt-10'>
+                <Button
+                  color='white'
+                  bgColor='blue'
+                  text='Download Report'
+                  borderRadius='10px'
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked width='320px' height='360px' />
             </div>
           </div>
         </div>
